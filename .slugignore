@@ -1,3 +1,11 @@
 inputs/cherry_leaves/cherry-leaves/test
 inputs/cherry_leaves/cherry-leaves/train
 jupyter_notebooks
+*.ipynb
+*.csv
+*.xlsx
+__pycache__/
+logs/
+tmp/
+datasets/
+*.h5

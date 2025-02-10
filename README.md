@@ -34,3 +34,18 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
     - I will validate the hypothesis by collecting an image dataset from the client and creating an image montage for both healthy and powdery mildew-affected leaves.
     - Creating an **average image** for both the 'powdery mildew' labelled images and the 'healthy' images label for comparison to each other.
     - Creating a **variable image** for both the 'powdery mildew' labelled images and 'healthy' labelled images for comparison to each other.
+
+# Rationale to map the business requirements to the Data Visualizations and ML tasks
+
+- Business requirement 1: the client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+
+    - An **average** image and a **variability** image both 'healthy' and 'powdery mildew' will be displayed on the dashboard.
+    - An **average** image for 'powdery_mildwew' containing leaves and 'healthy' leaves is displayed alongside a **difference** image for comparison between the two on the dashboard.
+    - An image montage is created to allow the client to view randomly selected images from either the 'powdery mildew' or 'healthy' image database.
+- Business requirement 2: The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+    - A prediction learning model is created to predict if a cherry leaf image (or images) can be classified as being healthy or containing powdery mildew.
+    - The prediction model should have at least a 97% accuracy level.
+    - The client can download a report of the images that they have selected in the form of an excel file.
+
+

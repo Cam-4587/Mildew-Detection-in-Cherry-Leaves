@@ -22,3 +22,15 @@ This app also visualises the cherry leaf data and compares healthy cherry leaves
 - To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
     - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
     - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+# Hypothesis
+
+Powdery mildew containing cherry leaves  will have clearly showing white mildew powder that can differentiate them clearly from healthy cherry leaves.
+
+## Validation
+- I will validate the hypothesis by collecting an image dataset from the client and creating an image montage for both healthy and powdery mildew containing leaves.
+
+- I will test the hypothesis by using image analysis:
+    - I will validate the hypothesis by collecting an image dataset from the client and creating an image montage for both healthy and powdery mildew-affected leaves.
+    - Creating an **average image** for both the 'powdery mildew' labelled images and the 'healthy' images label for comparison to each other.
+    - Creating a **variable image** for both the 'powdery mildew' labelled images and 'healthy' labelled images for comparison to each other.

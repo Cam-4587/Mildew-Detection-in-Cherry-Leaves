@@ -47,5 +47,54 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
     - A prediction learning model is created to predict if a cherry leaf image (or images) can be classified as being healthy or containing powdery mildew.
     - The prediction model should have at least a 97% accuracy level.
     - The client can download a report of the images that they have selected in the form of an excel file.
+# ML Business case
+## Page 1: Quick Project Summary
+### Quick project summary
+
+- General Information
+    - Farmy and Foods are facing a challenge where their cherry leaves have been presenting with powdery mildew.
+
+    - The current process is manual verification, taking a few samples of tree leaves from a cherry tree and verifying visually if the tree leaf is healthy or not. The employee will spend 30 minutes on each tree.
+    - The company has thousands of cherry trees located on multiple farms across the country. Therefore, this manual process is not scalable due to the time spent on the manual process.
+
+    - To save times on this, the IT team suggested an ML system that instantly detects whether using an image of a leaf tree image whether it is healthy or has powdery mildew.
+
+- Project Dataset
+    - The available dataset contains 4208 images provided by Farmy & Foods, taken from their crops. 
+    - Of these images 2104 of these are healthy cherry leaves and 2104 are cherry leaves with powdery mildew.
+- Business requirements
+    - The client is interested in a study to differentiate between a powdery mildew contained and healthy cherry leaf.
+    - The client is interested in telling whether a given cherry leaf contains malaria parasites or not.
+## Page 2: Cherry leaves Visualiser
+- It will answer business requirement 1
+    - Checkbox 1 - Difference between average and variability image
+    - Checkbox 2 - Differences between average parasitised and average uninfected cells
+    - Checkbox 3 - Image Montage
+## Page 3: Mildew detection
+- It will answer business requirement 2
+    - Link to download a set of powdery mildew contained and healthy cherry leaves.
+    - A user interface to upload multiple image files. It will display the image and a prediction statement indicating if the cherry leaf is infected with powdery mildew or not and the probability associated with this statement.
+    - Table with the image name and preciction results.
+    - A download button to dowload the table.
+## Page 4: Project Hypothesis and Validation
+- Block for each project hypothesis, describe the   conclusion and how you validated it.
+## page 5: ML prediction Metrics
+- Label Frequencies for Train, Validation, and Test Sets
+- Model History - Accuracy and Losses
+- Model evaluation result
+
+
+
+# Deployment
+## Heroku
+- The app live link is [here](https://cherry-leaf-mildew-detector-3-3672595f0fcb.herokuapp.com/).
+- Set the runtime.txt Python version to `python-3.12.2`
+- The project was deployed to Heroku using the following steps.
+    1. Log in to Heroku and create an app, give it an appropriate name and select either 'United States' or 'Europe'.
+    2. At the deploy tab, select Github as the deployment method.
+    3. Select your respository name and click Search, Once it is found, click Connect.
+    4. Select the branch you want to deploy, then click Deploy Branch.
+    5. The The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
+    6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
 

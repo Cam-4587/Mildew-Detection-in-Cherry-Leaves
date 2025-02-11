@@ -47,9 +47,31 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
     - A prediction learning model is created to predict if a cherry leaf image (or images) can be classified as being healthy or containing powdery mildew.
     - The prediction model should have at least a 97% accuracy level.
     - The client can download a report of the images that they have selected in the form of an excel file.
-# ML Business case
-## Page 1: Quick Project Summary
-### Quick project summary
+# ML Business Case
+1. What is the business objective requiring an ML solution?
+    - We require an ML solution to tell whether or not a cherry leaf contains powdery mildew or is healthy.
+
+2. Is data available for the training of the model, if yes which type of data, if no, how we are going to collect the data?
+    - Previous image data categorized as 'healthy' and 'powdery mildew' is provided by Farmy & Foods. This previous image data contains 4208 images overall, with 2104 images per label.
+3. Does the customer need a dashboard or an API endpoint?
+    - The client needs a dashboard.
+4. What does success look like for the client?
+    - Sucess looks like a dashboard with all the required business output. With images that can visually differentiate healthy leaves from powdery-mildew leaves and a model predictor where the client can predict if a leaf will be healthy or contain powdery mildew.
+5. Can you break down the project into Epics and User?
+    - The Project can be broken down into User stories which can be found [here](https://github.com/users/Cam-4587/projects/11). 
+6. Are there any Ethical or Privacy concerns?
+    - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project. Please see [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
+7. What level of prediction performance is needed?
+    - The classification model has to be 95% accurate or more.
+8. What are the project inputs and intended outputs?
+    - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
+9. Does the data suggest a particular model?
+    - The data suggests a binary classification model, more specifically a convolution neural network.
+10. how will the customer benefit?
+    - It will allow cherry leaves to be quickly categorized as being healthy or containing powdery mildew.
+# Dashboard Design (Streamlit App User Interface)
+#### Page 1: Quick Project Summary
+##### Quick project summary
 
 - General Information
     - Farmy and Foods are facing a challenge where their cherry leaves have been presenting with powdery mildew.
@@ -65,24 +87,36 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
 - Business requirements
     - The client is interested in a study to differentiate between a powdery mildew contained and healthy cherry leaf.
     - The client is interested in telling whether a given cherry leaf contains malaria parasites or not.
-## Page 2: Cherry leaves Visualiser
+
+![](docs/quick_project_summary.png)
+#### Page 2: Cherry leaves Visualiser
 - It will answer business requirement 1
     - Checkbox 1 - Difference between average and variability image
     - Checkbox 2 - Differences between average parasitised and average uninfected cells
-    - Checkbox 3 - Image Montage
-## Page 3: Mildew detection
+    - Checkbox 3 - Image 
+
+![](docs/cherry_leaves_visualiser_average_and_variability_image.png)
+![](docs/cherry_leaves_visualiser_differences_between_average_images_between_labels.png)
+![](docs/cherry_leaves_visualiser_image_montage_healthy.png)
+![](docs/cherry_leaves_visualiser_image_montage_powdery_mildew.png)
+#### Page 3: Mildew detection
 - It will answer business requirement 2
     - Link to download a set of powdery mildew contained and healthy cherry leaves.
     - A user interface to upload multiple image files. It will display the image and a prediction statement indicating if the cherry leaf is infected with powdery mildew or not and the probability associated with this statement.
     - Table with the image name and preciction results.
     - A download button to dowload the table.
-## Page 4: Project Hypothesis and Validation
+
+![](docs/mildew_detection.png)
+#### Page 4: Project Hypothesis and Validation
 - Block for each project hypothesis, describe the   conclusion and how you validated it.
-## page 5: ML prediction Metrics
+
+![](docs/project_hypothesis.png)
+#### page 5: ML prediction Metrics
 - Label Frequencies for Train, Validation, and Test Sets
 - Model History - Accuracy and Losses
-- Model evaluation result
+- Model evaluation 
 
+![](docs/ml_performance_metrics.png)
 
 
 # Deployment

@@ -118,7 +118,6 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
 
 ![](docs/ml_performance_metrics.png)
 
-
 # Deployment
 ## Heroku
 - The app live link is [here](https://cherry-leaf-mildew-detector-3-3672595f0fcb.herokuapp.com/).
@@ -130,5 +129,18 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
     4. Select the branch you want to deploy, then click Deploy Branch.
     5. The The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
     6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
+
+# Main Data Analysis and Machine Learning Libraries
+- **numpy** was used to load images in an array in the data visualisation notebook
+- **pandas** was used in the modelling and evaluation notebook to create a dataframe for visualising the frequency of images in train, set and validation datasets.
+- **matplotlib** was used in the data visualisation notebook to show the difference between average powdery mildew containing and average uninfected cherry leaves images.
+- **seaborn** was used in the data visualisation notebook to print out a scatterplot to plot average width and average height for images in the training set of images.
+- **plotly** was used to create the Machine learning metrics plots that are seen on the dashboard on the ML performance metrics page on the dashboard.
+- **Pillow** was used to display images in the mildew detector dashboard page.
+- **streamlit** was used to create the streamlit dashboard.
+- **joblib** was used to load a saved image shape embedding in the modelling and visualisation jupyter notebook.
+- **scikit-learn** was used to train the machine learning model for binary classification.
+- **tensorflow** was used to add Sequential, Conv2D, MaxPooling2D, Flatten, Dense, Dropout, and Activation layers to the model.
+- **keras** was used for early stopping during training in the modelling and evaluation Jupyter ntoebook.
 
 

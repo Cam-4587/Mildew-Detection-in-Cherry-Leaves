@@ -118,6 +118,20 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
 
 ![](docs/ml_performance_metrics.png)
 
+# Bugs
+- When I first Deployed me project to Heroku the slug size was higher than 500MB which meant the 
+project couldn't be deployed.
+- So in order to correct this I added the following the ```.slugignore file```
+    - *.ipynb
+    - *.csv
+    - *.xlsx
+    - `__pycache__/`
+    - logs/
+    - tmp/
+    - datasets/
+    - *.h5
+- After deploying again the slug size was reduced to below 500MB and the project was successfully deployed.
+
 # Deployment
 ## Heroku
 - The app live link is [here](https://cherry-leaf-mildew-detector-3-3672595f0fcb.herokuapp.com/).
@@ -143,4 +157,8 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
 - **tensorflow** was used to add Sequential, Conv2D, MaxPooling2D, Flatten, Dense, Dropout, and Activation layers to the model.
 - **keras** was used for early stopping during training in the modelling and evaluation Jupyter ntoebook.
 
+# Credits
+Credits:
+- The project extensively referenced the [Malaria Detector](https://github.com/Code-Institute-Solutions/WalkthroughProject01) project by Code Institute.
+- The project was created using the [Mildew Detection in Cherry](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) template by Code Institute.
 

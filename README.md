@@ -11,6 +11,28 @@ This app also visualises the cherry leaf data and compares healthy cherry leaves
 
 ![](/docs/am_i_responsive%20_image.png)
 
+# Contents
+- [Overview](#overview)
+- [Dataset Content](#dataset-content)
+- [Business Requirements](#business-requirements)
+- [Hypothesis](#hypothesis)
+- [Project Workflow](#project-workflow)
+  - [Business Understanding](#business-understanding)
+  - [Data Understanding](#data-understanding)
+  - [Data Preparation](#data-preparation)
+  - [Data Modelling](#data-modelling)
+  - [Evaluation](#evaluation)
+  - [Deployment](#deployment)
+- [Model Creation](#model-creation)
+- [Rationale to Map Business Requirements to ML Tasks](#rationale-to-map-business-requirements-to-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [Dashboard Design](#dashboard-design)
+- [Bugs](#bugs)
+- [Deployment on Heroku](#deployment)
+- [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
+
+
 # Dataset Content
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)  We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
 - The dataset contains 4208 images taken from the client's crop fields. The images show healthy cherry leaves(2104 images) and cherry leaves that have powdery mildew (2104 images), a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
@@ -67,11 +89,6 @@ These stages have the following relationship:
 - Data augmentation using ImageDataGenerator.
 - Creating and training a machine learning model.
 - Saving the trained model.
-
-### Modelling
-- Evaluating model performance on the test set.
-- Plotting the learning curve for model performance.
-- Making predictions on new data and interpreting the results.
 
 ### Evaluation
 - Evaluating model performance on the test set.
@@ -239,8 +256,13 @@ project couldn't be deployed.
 - **keras** was used for early stopping during training in the modelling and evaluation Jupyter ntoebook.
 
 # Credits
-Credits:
+
 - The project extensively referenced the [Malaria Detector](https://github.com/Code-Institute-Solutions/WalkthroughProject01) project by Code Institute.
 - The project was created using the [Mildew Detection in Cherry](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) template by Code Institute.
 - the CRISP-DM image was taken from the following Code institute lesson [CRISP-DM Workflow](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PA101+2021_Q4/courseware/e7f40db7fd894e808b110f2abd018842/4bb138cb6a8742e4aedb4401bf88d201/)
+
+- The following README files included sections about the CRISP-DM workflow and Model creation that I have included in my README section. 
+    - [KhanRana - PP5-mildew-detection-in-cherry-leaves](https://github.com/KhanRana/PP5-mildew-detection-in-cherry-leaves/blob/main/README.md)
+
+    - [Porsil - mildew_detection_in_cherry_leaves](https://github.com/Porsil/mildew_detection_in_cherry_leaves/blob/main/README.md)
 

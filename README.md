@@ -35,6 +35,87 @@ Powdery mildew containing cherry leaves  will have clearly showing white mildew 
     - Creating an **average image** for both the 'powdery mildew' labelled images and the 'healthy' images label for comparison to each other.
     - Creating a **variable image** for both the 'powdery mildew' labelled images and 'healthy' labelled images for comparison to each other.
 
+# Project Workflow
+The project was carried out using CRISP-DM Process that involves six stages:
+- Business understanding
+- Data Understanding
+- Data Preparation
+- Data Modelling
+- Data Evaulation
+
+These stages have the following relationship:
+<br>
+<br>
+
+![](/docs/crisp_dm_workflow.png)
+
+### Business understanding
+- The Business understanding is outlined in [ML Business case](#ml-business-case).
+
+### Data Understanding
+- Visualizing data to understand the differences between healthy and infected leaves.
+- Computing average image size and variability per label.
+- Plotting the mean and variability of images per label.
+- Plotting a difference image between the mean images of both labels.
+### Data Preparation
+- Collecting data from Kaggle.
+- Removing non-image files.
+- Splitting data into training, validation, and testing sets.
+- Loading image data and preparing it for further analysis.
+
+### Data Modelling
+- Data augmentation using ImageDataGenerator.
+- Creating and training a machine learning model.
+- Saving the trained model.
+
+### Modelling
+- Evaluating model performance on the test set.
+- Plotting the learning curve for model performance.
+- Making predictions on new data and interpreting the results.
+
+### Evaluation
+- Evaluating model performance on the test set.
+-  the learning curve for model performance.
+- Making predictions on image data and interpreting the results.
+
+### Deployment
+- Set python version to 3.12.2 in runttime.txt.
+- Add files not necessary for deployment in .slugignore file as to keep slug size below 500MB.
+- Project is Deployed on Heroku
+
+# Model Creation
+Because the project is an binary image classification, a convolution Neural Network(CNN) was used to create a sequential prediction model to classify images as either being 'healthy' or containing 'powdery mildew'.
+
+The model has 5 different layers:
+- Conv2D
+- MaxPooling2D
+- Flatten
+- Dense
+- Dropout
+
+### Convolution and Maxpooling layers
+- Convolution layers are used to select the dominant pixel value from the non-dominant pixels in images using filters, taking a predefined image shape as its input shape.
+-  Two of the Convolution layers have 32 filters and one has 64 filters and all of the convolution layers have a 3 x 3 kernel size.
+- The Max-pooling layers reduce the size of image by extracting only the dominant pixels within the pool size. 
+- The Convolution layers paired with the Maxpooling layers removes the nonessential part of the images and reduces complexity, therefore providing more accuracy.
+
+- The Maxpooling layers have a kernel size of 2 x 2.
+
+### Flatten layer
+- The flatten layer is used to flatten the matrix into a vector (single list of values)
+- It then feeds the data into the dense layer.
+### Dense layer
+- The dense layer does the mathematical operation and gives the output.
+There are two dense layers in the model
+    - One after the flatten layer that uses 128 nodes and a 'relu' activation function.
+    - Another after the Dropout layer that uses 1 node and a sigmoid activation function.
+
+### Dropout layer
+- The Dropout value is set to 0.5 so 50% of the  are dropped to avoid overfitting the model.
+
+### Model compiler
+- The loss, optimizer, and metrics used in the model compiler are binary cross-entropy, adam, and accuracy .
+
 # Rationale to map the business requirements to the Data Visualizations and ML tasks
 
 - Business requirement 1: the client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
@@ -161,4 +242,5 @@ project couldn't be deployed.
 Credits:
 - The project extensively referenced the [Malaria Detector](https://github.com/Code-Institute-Solutions/WalkthroughProject01) project by Code Institute.
 - The project was created using the [Mildew Detection in Cherry](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) template by Code Institute.
+- the CRISP-DM image was taken from the following Code institute lesson [CRISP-DM Workflow](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PA101+2021_Q4/courseware/e7f40db7fd894e808b110f2abd018842/4bb138cb6a8742e4aedb4401bf88d201/)
 

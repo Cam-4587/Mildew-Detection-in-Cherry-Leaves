@@ -9,4 +9,3 @@ logs/
 tmp/
 datasets/
 docs/
-*.h5

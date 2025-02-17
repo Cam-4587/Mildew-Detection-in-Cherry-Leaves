@@ -18,16 +18,16 @@ def cherry_leaves_visualizer_body():
     version = 'v1'
     if st.checkbox("Difference between average and variability image"):
       
-      avg_parasitized = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png") 
-      avg_uninfected = plt.imread(f"outputs/{version}/avg_var_healthy.png")
+      avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png") 
+      avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
 
       st.warning(
         f"* We notice the average and variability images did not show "
         f"patterns where we could intuitively differentiate one from another. " 
         f"However, a small difference in the colour pigment of the average images is seen for both labels.")
 
-      st.image(avg_parasitized, caption='Healthy cherry leaf - Average and Variability')
-      st.image(avg_uninfected, caption='Powdery Mildew Cherry leaf - Average and Variability')
+      st.image(avg_powdery_mildew, caption='Healthy cherry leaf - Average and Variability')
+      st.image(avg_healthy, caption='Powdery Mildew Cherry leaf - Average and Variability')
       st.write("---")
 
     if st.checkbox("Differences between average healthy cherry leaf and average cherry leaf containing powdery mildew"):

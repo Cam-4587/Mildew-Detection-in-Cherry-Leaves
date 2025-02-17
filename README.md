@@ -160,7 +160,7 @@ There are two dense layers in the model
 6. Are there any Ethical or Privacy concerns?
     - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project. Please see [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
 7. What level of prediction performance is needed?
-    - The classification model has to be 95% accurate or more.
+    - The classification model has to be 97% accurate or more.
 8. What are the project inputs and intended outputs?
     - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
 9. Does the data suggest a particular model?
@@ -184,14 +184,14 @@ There are two dense layers in the model
     - Of these images 2104 of these are healthy cherry leaves and 2104 are cherry leaves with powdery mildew.
 - Business requirements
     - The client is interested in a study to differentiate between a powdery mildew contained and healthy cherry leaf.
-    - The client is interested in telling whether a given cherry leaf contains malaria parasites or not.
+    - The client is interested in telling whether a given cherry leaf contains powdery mildew or not.
 
 ![](docs/quick_project_summary.png)
 #### Page 2: Cherry leaves Visualiser
 - It will answer business requirement 1
     - Checkbox 1 - Difference between average and variability image
-    - Checkbox 2 - Differences between average parasitised and average uninfected cells
-    - Checkbox 3 - Image 
+    - Checkbox 2 - Differences between healthy cherry leaves and cherry leaves that contain powdery midlew.
+    - Checkbox 3 - Image Montage that displays a selection of images for each label, 'healthy' and 'powdery mildew'.
 
 ![](docs/cherry_leaves_visualiser_average_and_variability_image.png)
 ![](docs/cherry_leaves_visualiser_differences_between_average_images_between_labels.png)
@@ -265,4 +265,5 @@ project couldn't be deployed.
     - [KhanRana - PP5-mildew-detection-in-cherry-leaves](https://github.com/KhanRana/PP5-mildew-detection-in-cherry-leaves/blob/main/README.md)
 
     - [Porsil - mildew_detection_in_cherry_leaves](https://github.com/Porsil/mildew_detection_in_cherry_leaves/blob/main/README.md)
+- The following article was helped me to add labels to my barplots [seabron.barplot](https://seaborn.pydata.org/generated/seaborn.barplot.html).
 

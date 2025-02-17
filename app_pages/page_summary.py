@@ -18,7 +18,7 @@ def page_summary_body():
     f"if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, "
     f"there is a realistic chance to replicate this project for all other crops.\n\n"
     f"**Project Dataset**\n"
-    f"* The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops."
+    f"* The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops. The original dataset can be found here [Cherry leaf dataset](https://www.kaggle.com/codeinstitute/cherry-leaves)"
 )
 
 

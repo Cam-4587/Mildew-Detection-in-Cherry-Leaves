@@ -128,7 +128,7 @@ There are two dense layers in the model
     - Another after the Dropout layer that uses 1 node and a sigmoid activation function.
 
 ### Dropout layer
-- The Dropout value is set to 0.5 so 50% of the  are dropped to avoid overfitting the model.
+- The Dropout value is set to 0.5 so 50% of nodes are dropped to avoid overfitting the model.
 
 ### Model compiler
 - The loss, optimizer, and metrics used in the model compiler are binary cross-entropy, adam, and accuracy .
@@ -137,7 +137,7 @@ There are two dense layers in the model
 
 - Business requirement 1: the client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 
-    - An **average** image and a **variability** image both 'healthy' and 'powdery mildew' will be displayed on the dashboard.
+    - An **average** image and a **variability** image for both 'healthy' and 'powdery mildew' cherry leaves will be displayed on the dashboard.
     - An **average** image for 'powdery_mildwew' containing leaves and 'healthy' leaves is displayed alongside a **difference** image for comparison between the two on the dashboard.
     - An image montage is created to allow the client to view randomly selected images from either the 'powdery mildew' or 'healthy' image database.
 - Business requirement 2: The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
@@ -209,7 +209,7 @@ There are two dense layers in the model
 - Block for each project hypothesis, describe the   conclusion and how you validated it.
 
 ![](docs/project_hypothesis.png)
-#### page 5: ML prediction Metrics
+#### Page 5: ML prediction Metrics
 - Label Frequencies for Train, Validation, and Test Sets
 - Model History - Accuracy and Losses
 - Model evaluation 
@@ -230,16 +230,19 @@ project couldn't be deployed.
     - *.h5
 - After deploying again the slug size was reduced to below 500MB and the project was successfully deployed.
 
+- However after deploying the project on Heroku the mildew detector was not functional because ```cherry_leaves_model.h5``` in the output folder was being removed before deploying to Heroku due to ```*.h5``` in the ```.slugignore file```.
+- After removing ```*.h5``` from the ```.slugignore file``` the project could be successful deployed to Heroku with a fully functional mildew detector.
+
 # Deployment
 ## Heroku
 - The app live link is [here](https://cherry-leaf-mildew-detector-3-3672595f0fcb.herokuapp.com/).
-- Set the runtime.txt Python version to `python-3.12.2`
+- Set the runtime.txt Python version to `python-3.12.9`
 - The project was deployed to Heroku using the following steps.
     1. Log in to Heroku and create an app, give it an appropriate name and select either 'United States' or 'Europe'.
     2. At the deploy tab, select Github as the deployment method.
     3. Select your respository name and click Search, Once it is found, click Connect.
     4. Select the branch you want to deploy, then click Deploy Branch.
-    5. The The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
+    5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
     6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
 # Main Data Analysis and Machine Learning Libraries
@@ -265,5 +268,9 @@ project couldn't be deployed.
     - [KhanRana - PP5-mildew-detection-in-cherry-leaves](https://github.com/KhanRana/PP5-mildew-detection-in-cherry-leaves/blob/main/README.md)
 
     - [Porsil - mildew_detection_in_cherry_leaves](https://github.com/Porsil/mildew_detection_in_cherry_leaves/blob/main/README.md)
-- The following article was helped me to add labels to my barplots [seabron.barplot](https://seaborn.pydata.org/generated/seaborn.barplot.html).
+- The following article was helped me to add labels to my barplots [seaborn.barplot](https://seaborn.pydata.org/generated/seaborn.barplot.html).
+
+- The following webpages helped me when altering the y-axis of the labels distribution bar plot
+    - [Matplotlib - setting y-axis](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html)
+    - [Stack Overflow - How to show Y axis label horizontally](https://stackoverflow.com/questions/27671748/how-to-show-y-axis-label-horizontally)
 

@@ -24,11 +24,11 @@ This app also visualises the cherry leaf data and compares healthy cherry leaves
   - [Evaluation](#evaluation)
   - [Deployment](#deployment)
 - [Model Creation](#model-creation)
-- [Rationale to Map Business Requirements to ML Tasks](#rationale-to-map-business-requirements-to-ml-tasks)
+- [Rationale to Map Business Requirements to ML Tasks](#rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
 - [ML Business Case](#ml-business-case)
-- [Dashboard Design](#dashboard-design)
+- [Dashboard Design](#dashboard-design-streamlit-app-user-interface)
 - [Bugs](#bugs)
-- [Deployment on Heroku](#deployment)
+- [Deployment on Heroku](#deployment-1)
 - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 - [Credits](#credits)
 
@@ -96,12 +96,12 @@ These stages have the following relationship:
 - Making predictions on image data and interpreting the results.
 
 ### Deployment
-- Set python version to 3.12.2 in runttime.txt.
+- Set python version to 3.12.9 in runttime.txt.
 - Add files not necessary for deployment in .slugignore file as to keep slug size below 500MB.
 - Project is Deployed on Heroku
 
 # Model Creation
-Because the project is an binary image classification, a convolution Neural Network(CNN) was used to create a sequential prediction model to classify images as either being 'healthy' or containing 'powdery mildew'.
+Because the project is a binary image classification, a convolution Neural Network(CNN) was used to create a sequential prediction model to classify images as either being 'healthy' or containing 'powdery mildew'.
 
 The model has 5 different layers:
 - Conv2D
@@ -177,7 +177,7 @@ There are two dense layers in the model
     - The current process is manual verification, taking a few samples of tree leaves from a cherry tree and verifying visually if the tree leaf is healthy or not. The employee will spend 30 minutes on each tree.
     - The company has thousands of cherry trees located on multiple farms across the country. Therefore, this manual process is not scalable due to the time spent on the manual process.
 
-    - To save times on this, the IT team suggested an ML system that instantly detects whether using an image of a leaf tree image whether it is healthy or has powdery mildew.
+    - To save time on this, the IT team suggested an ML system that instantly detects whether an image of a cherry leaf image is healthy or has powdery mildew.
 
 - Project Dataset
     - The available dataset contains 4208 images provided by Farmy & Foods, taken from their crops. 
@@ -231,7 +231,7 @@ project couldn't be deployed.
 - After deploying again the slug size was reduced to below 500MB and the project was successfully deployed.
 
 - However after deploying the project on Heroku the mildew detector was not functional because ```cherry_leaves_model.h5``` in the output folder was being removed before deploying to Heroku due to ```*.h5``` in the ```.slugignore file```.
-- After removing ```*.h5``` from the ```.slugignore file``` the project could be successful deployed to Heroku with a fully functional mildew detector.
+- After removing ```*.h5``` from the ```.slugignore file``` the project could be successfully deployed to Heroku with a fully functional mildew detector.
 
 # Deployment
 ## Heroku

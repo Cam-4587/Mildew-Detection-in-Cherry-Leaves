@@ -233,6 +233,11 @@ project couldn't be deployed.
 - However after deploying the project on Heroku the mildew detector was not functional because ```cherry_leaves_model.h5``` in the output folder was being removed before deploying to Heroku due to ```*.h5``` in the ```.slugignore file```.
 - After removing ```*.h5``` from the ```.slugignore file``` the project could be successfully deployed to Heroku with a fully functional mildew detector.
 
+- When uploading multiple images to the Mildew detector a ```StreamlitDuplicateElementKey``` error appeared that prevented a full analysis report to be produced. This was fixed by doing the following:
+    - The ```key_suffix``` parameter is used in ```plot_predictions_probabilities``` to uniquely identify each Streamlit chart component, preventing conflicts. 
+    - In ```st.file_uploader```, ```key_suffix=img_pil``` ensures each chart and file upload is uniquely identifiable.
+
+
 # Deployment
 ## Heroku
 - The app live link is [here](https://cherry-leaf-mildew-detector-3-3672595f0fcb.herokuapp.com/).

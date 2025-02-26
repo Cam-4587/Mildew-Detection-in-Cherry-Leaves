@@ -40,7 +40,7 @@ def page_mildew_detector_body():
             version = 'v1'
             resized_img = resize_input_image(img=img_pil, version=version)
             pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
-            plot_predictions_probabilities(pred_proba, pred_class)
+            plot_predictions_probabilities(pred_proba, pred_class, key_suffix=img_pil)
 
             df_report = df_report._append({"Name":image.name, 'Result': pred_class },
                                         ignore_index=True)

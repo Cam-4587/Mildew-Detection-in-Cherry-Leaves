@@ -138,7 +138,7 @@ There are two dense layers in the model
 - Business requirement 1: the client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 
     - An **average** image and a **variability** image for both 'healthy' and 'powdery mildew' cherry leaves will be displayed on the dashboard.
-    - An **average** image for 'powdery_mildwew' containing leaves and 'healthy' leaves is displayed alongside a **difference** image for comparison between the two on the dashboard.
+    - An **average** image for 'powdery_mildew' containing leaves and 'healthy' leaves is displayed alongside a **difference** image for comparison between the two on the dashboard.
     - An image montage is created to allow the client to view randomly selected images from either the 'powdery mildew' or 'healthy' image database.
 - Business requirement 2: The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
@@ -202,7 +202,7 @@ There are two dense layers in the model
     - Link to download a set of powdery mildew contained and healthy cherry leaves.
     - A user interface to upload multiple image files. It will display the image and a prediction statement indicating if the cherry leaf is infected with powdery mildew or not and the probability associated with this statement.
     - Table with the image name and preciction results.
-    - A download button to dowload the table.
+    - A download button to download the table.
 
 ![](docs/mildew_detection.png)
 #### Page 4: Project Hypothesis and Validation
@@ -217,7 +217,7 @@ There are two dense layers in the model
 ![](docs/ml_performance_metrics.png)
 
 # Bugs
-- When I first Deployed me project to Heroku the slug size was higher than 500MB which meant the 
+- When I first Deployed my project to Heroku the slug size was higher than 500MB which meant the 
 project couldn't be deployed.
 - So in order to correct this I added the following the ```.slugignore file```
     - *.ipynb
